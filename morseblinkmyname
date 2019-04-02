@@ -1,0 +1,39 @@
+int led = D7;
+void setup() {
+    pinMode(led, OUTPUT);
+    digitalWrite(led, LOW);
+}
+void dot() {
+    digitalWrite(led , HIGH);
+    delay(1000);
+    digitalWrite(led, LOW);
+    delay(1000);
+}
+
+void dash() {
+    digitalWrite(led , HIGH);
+    delay(4000);
+    digitalWrite(led , LOW);
+    delay(1000);
+}
+
+void loop() {
+    dash();     //"N"
+    dot();
+    
+    dot();     //"I"
+    dot();
+    
+    dot();     //"S"
+    dot();
+    dot();
+    
+    dot();//"A"
+    dash();
+    
+    dot();       //"L"
+    dash();
+    dot();
+    dot();
+
+}
